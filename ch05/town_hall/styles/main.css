@@ -1,3 +1,8 @@
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
 /* custom property */
 :root {
 	--accent-color: #800000;  /* could also be coded #800 */
@@ -7,6 +12,16 @@
 body {
 	font-family: Arial, Helvetica, sans-serif;
     font-size: 100%;
+	width: 80%;
+	margin: auto;
+	border: 2px solid var(--accent-color);
+}
+h1,h2,h3,p,ul{
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+}
+ul{
+	margin-left: 2em;
 }
 a:hover, a:focus{
 	font-style: italic;
@@ -25,29 +40,56 @@ h3 {
 
 /* the styles for the header */
 header {
+	border-bottom: 2px solid var(--accent-color);
+	background: linear-gradient(
+		#f6bb73 0%,
+		white 30%,
+		white 65%,
+		#f6bb73 100%
+		
+	);
 	& h2 {
 		font-size: 175%;
-		text-indent: 30px;
+		padding-bottom: 0;
+		
 	}
 	& h3 {
 		font-size: 130%;
 		font-style: italic;
-		text-indent: 30px;
+		padding-bottom: 1em;
 	}
 	& img {
 		float: left;
+		margin: .75em 1em .75em 1em;
 	}
 }
 
 /* the styles for the main content */
 main {
 	clear: left;
-}
+	padding:0 1em 1em 1em;
 
+	& img{
+		border:4px double var(--accent-color);
+		border-radius: 10px;
+	}
+}
+main h1{
+	border-top: 2px solid var(--accent-color);
+	border-bottom: 2px solid var(--accent-color);
+}
+blockquote{
+	font-style: italic;
+	padding:0 2em 0 2em;
+}
 /* the styles for the footer */
 footer {
+	background-color: var(--accent-color);
+
 	& p {
+		color: white;
 		text-align: center;
+		padding:1em 0 1em 0;
 	}
 }
 
